@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node .seeders/20250525160259-add-admin-user.cjs",
+    "seed:hash": "node seeders/20250919-hash-captain-ship-password.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apigames": "^1.0.7-beta",
+    "axios": "^1.10.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
+    "firebase": "^10.12.2",
+    "firebase-admin": "^12.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.2.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.14.1",
+    "node-cron": "^4.2.1",
+    "nodemon": "^3.1.0",
+    "request-promise-native": "^1.0.9",
+    "sequelize": "^6.37.1"
+  },
+  "keywords": [],
+  "description": ""
+}

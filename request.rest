@@ -1,0 +1,465 @@
+# GET http://localhost:5000/users
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsImlhdCI6MTcxNzM4NzM2MSwiZXhwIjoxNzE3Mzg3Mzc2fQ.ksM2niuJtAzc0Nbjkpqj46g8Gdgh-OZacOOgZdeIdz4
+
+
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "secret123",
+  "confirmPassword": "secret123",
+  "role": "user"
+}
+
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "Rangga",
+    "email": "dwiranggaoktaz@gmail.com",
+    "password": "Rangga123",
+    "confirmPassword": "Rangga123"
+}
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "fueladmin",
+    "email": "fueladmin@gmail.com",
+    "password": "fueladmin123",
+    "confirmPassword": "fueladmin123",
+    "role": "fuel"
+}
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "fwadmin",
+    "email": "fwadmin@gmail.com",
+    "password": "fwadmin123",
+    "confirmPassword": "fwadmin123",
+    "role": "fw"
+}
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "passangeradmin",
+    "email": "passangeradmin@gmail.com",
+    "password": "passangeradmin123",
+    "confirmPassword": "passangeradmin123",
+    "role": "passanger"
+}
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "fleetadmin",
+    "email": "fleetadmin@gmail.com",
+    "password": "fleetadmin123",
+    "confirmPassword": "fleetadmin123",
+    "role": "fleet"
+}
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "spvadmin",
+    "email": "spvadmin@gmail.com",
+    "password": "spvadmin123",
+    "confirmPassword": "spvadmin123",
+    "role": "spv"
+}
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "useradmin",
+    "email": "useradmin@gmail.com",
+    "password": "useradmin123",
+    "confirmPassword": "useradmin123",
+    "role": "user"
+}
+###
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "name": "superadmin",
+    "email": "superadmin",
+    "password": "superadmin123",
+    "confirmPassword": "superadmin123",
+    "role": "superadmin"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "id": "3",
+    "password": "fueladmin123"
+}
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "sv.giatjaya",
+    "password": "sv.giatjaya",
+    "role": "fw"
+}
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+### Update user (contoh update name & role saja, password tidak berubah)
+PUT http://localhost:5000/update/user/super-admin/13
+Content-Type: application/json
+
+{
+  "name": "AIDA-A*"
+}
+###
+DELETE http://localhost:5000/delete/user/super-admin/156
+//drilling
+### Get all drilling data
+GET http://localhost:5000/all/drilling
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+### Get By id drilling data
+GET http://localhost:5000/drillingById/DRL001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### Add new Drilling
+POST http://localhost:5000/add/drilling
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "drilling_id": "DRL002",
+  "name_drilling": "Rig Alpha",
+  "type_drilling": "Jack-up",
+  "lat_drilling": -5.12345,
+  "lon_drilling": 117.67890,
+  "status_drilling": "aktif"
+}
+### Update existing Drilling
+PUT http://localhost:5000/update/drilling/DRL002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "name_drilling": "Rig Alpha Update",
+  "type_drilling": "Semi-submersible",
+  "lat_drilling": -5.54321,
+  "lon_drilling": 118.12345,
+  "status_drilling": "nonaktif"
+}
+### Delete Drilling
+DELETE http://localhost:5000/delete/drilling/DRL002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+//FSO
+### Get all FSO data
+GET http://localhost:5000/all/fso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+### Get By id FSO data
+GET http://localhost:5000/fsoById/FSO001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### Add new FSO
+POST http://localhost:5000/add/fso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "FSO_id": "FSO002",
+  "name_FSO": "FSO Alpha",
+  "type_FSO": "Floating Storage",
+  "lat_FSO": -1.23456,
+  "lon_FSO": 115.67890,
+  "status_FSO": "aktif"
+}
+### Update new FSO
+PUT http://localhost:5000/update/fso/FSO001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "FSO_id": "FSO001",
+  "name_FSO": "FSO Alphabeta",
+  "type_FSO": "Floating Storage",
+  "lat_FSO": -1.23456,
+  "lon_FSO": 115.67890,
+  "status_FSO": "aktif"
+}
+### Delete Drilling
+DELETE http://localhost:5000/delete/fso/FSO002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+//pelabuhan
+### ✅ Get All Pelabuhan
+GET http://localhost:5000/all/pelabuhan
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### ✅ Get Pelabuhan By ID
+GET http://localhost:5000/pelabuhanById/PBHN001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### ✅ Create Pelabuhan
+POST http://localhost:5000/add/pelabuhan
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "pelabuhan_id": "PBHN002",
+  "name_pelabuhan": "Pelabuhan Tanjung Priok",
+  "type_pelabuhan": "Pelabuhan Umum",
+  "lat_pelabuhan": -6.1045,
+  "lon_pelabuhan": 106.8866,
+  "status_pelabuhan": "Aktif"
+}
+
+### ✅ Update Pelabuhan
+PUT http://localhost:5000/update/pelabuhan/PBHN001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "name_pelabuhan": "Pelabuhan Tanjung Priok Update",
+  "type_pelabuhan": "Pelabuhan Komersil",
+  "lat_pelabuhan": -6.1047,
+  "lon_pelabuhan": 106.8888,
+  "status_pelabuhan": "Non-Aktif"
+}
+
+### ✅ Delete Pelabuhan
+DELETE http://localhost:5000/delete/pelabuhan/PBHN002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+//platform
+### GET ALL PLATFORM
+GET http://localhost:5000/all/platform
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### GET PLATFORM BY ID
+GET http://localhost:5000/platformById/PLT001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### ADD NEW PLATFORM
+POST http://localhost:5000/add/platform
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "platform_id": "PLT002",
+  "name_platform": "Platform Alpha",
+  "type_platform": "Offshore",
+  "lat_platform": -5.12345,
+  "lon_platform": 120.67890,
+  "status_platform": "Aktif"
+}
+
+### UPDATE PLATFORM
+PUT http://localhost:5000/update/platform/PLT001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "name_platform": "Platform Alpha Updated",
+  "type_platform": "Onshore",
+  "lat_platform": -5.54321,
+  "lon_platform": 120.12345,
+  "status_platform": "Non-Aktif"
+}
+
+### DELETE PLATFORM
+DELETE http://localhost:5000/delete/platform/PLT002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+//pulau
+### Get All Pulau
+GET http://localhost:5000/all/pulau
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### Get Pulau by ID
+GET http://localhost:5000/pulauById/PUL001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### Create Pulau
+POST http://localhost:5000/add/pulau
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+{
+  "pulau_id": "PUL002",
+  "name_pulau": "Pulau Seribu",
+  "type_pulau": "Utama",
+  "lat_pulau": -5.8322,
+  "lon_pulau": 106.6275,
+  "status_pulau": "aktif"
+}
+
+### Update Pulau
+PUT http://localhost:5000/update/pulau/PUL001
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+{
+  "name_pulau": "Pulau Seribu Besar",
+  "type_pulau": "Cadangan",
+  "lat_pulau": -5.9000,
+  "lon_pulau": 106.6000,
+  "status_pulau": "non-aktif"
+}
+
+### Delete Pulau
+DELETE http://localhost:5000/delete/pulau/PUL002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+//type fuel
+### ✅ Get all type fuel
+GET http://localhost:5000/all/typefuel
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### ✅ Get type fuel by ID
+GET http://localhost:5000/typefuelById/TYPF001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### ✅ Add new type fuel
+POST http://localhost:5000/add/typefuel
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+{
+  "type_fuel_id": "TYPF001",
+  "name_type_fuel": "Solar Industri",
+  "status_type_fuel": "aktif"
+}
+
+### ✅ Update type fuel
+PUT http://localhost:5000/update/typefuel/TYPF001
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+{
+  "name_type_fuel": "Solar",
+  "status_type_fuel": "nonaktif"
+}
+
+### ✅ Delete type fuel
+DELETE http://localhost:5000/delete/typefuel/TYPF001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+//material fuel
+
+### GET All Material Fuel
+GET http://localhost:5000/all/material/fuel
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### GET Material Fuel by ID
+GET http://localhost:5000/material/fuelById/MTF001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### POST Create Material Fuel
+POST http://localhost:5000/add/material/fuel
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "material_fuel_id": "MTF001",
+  "type_fuel_id": "TYPF001",
+  "name_material_fuel": "Bio Solar",
+  "stok_material_fuel": 10000,
+  "status_material_fuel": "aktif"
+}
+
+### PUT Update Material Fuel
+PUT http://localhost:5000/update/material/fuel/MTF001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+Content-Type: application/json
+
+{
+  "name_material_fuel": "Solar Industri Premium",
+  "stok_material_fuel": 12000,
+  "status_material_fuel": "aktif"
+}
+
+### DELETE Material Fuel
+DELETE http://localhost:5000/delete/material/fuel/MTF001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+//fresh water
+
+### Get All Fresh Water
+GET http://localhost:5000/all/freshwater
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### Get Fresh Water By ID
+GET http://localhost:5000/freshwaterById/FW001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+### Add Fresh Water
+POST http://localhost:5000/add/freshwater
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+{
+  "fresh_water_id": "FW001",
+  "name_fresh_water": "Air Tawar",
+  "stok_fresh_water": 100,
+  "status_fresh_water": "aktif"
+}
+
+
+### Update Fresh Water
+PUT http://localhost:5000/update/freshwater/FW001
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+{
+  "name_fresh_water": "Air Tawar Tangki",
+  "stok_fresh_water": 80,
+  "status_fresh_water": "aktif"
+}
+
+### Delete Fresh Water
+DELETE http://localhost:5000/delete/freshwater/FW001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSYW5nZ2EiLCJlbWFpbCI6ImR3aXJhbmdnYW9rdGF6QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzE3MDU4NCwiZXhwIjoxNzUzNzc1Mzg0fQ.JJOmZRoA7S2BC0WrSePGn6sHSQVhol1Xqe76aK2umlw
+
+###
+### Add Ship Request (Fuel Only)
+POST http://localhost:5000/add/request
+Content-Type: application/json
+
+{
+  "ship_position_id": 1,
+  "id": "8",
+  "tanggal_request": "2025-09-02",
+  "kordinat_request": "-6.200, 106.816",
+  "email": "useradmin@gmail.com",
+  "kategori_request": "fuel",
+  "status_request": "need to process",
+  "fuelRequests": [
+    {
+      "jenis_fuel": "SOLAR",
+      "jenis_material": "BIOSOLAR",
+      "kuantiti": 5000,
+      "satuan_ukur": "liter"
+    }
+  ]
+}
+
+
